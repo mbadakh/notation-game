@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Notation Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Guess The Notes</h1>
+        <div class="timer">
+            <div class="last-round-time">
+                <h5>Your Last Round Time:</h5>
+                <h5 id="timer">0</h5>
+            </div>
+            <div class="personal-best">
+                <h5>Your Personal Best Time:</h5>
+                <h5 id="best-time">99</h5>
+            </div>
+            
+        </div>
+        <div class="music-sheet ">
+            <div class="clef">&#119070;</div>
+            <div class="staff">
+                <!-- Staff lines will be added here dynamically -->
+            </div>
+            <div class="notes">
+                <!-- Notes will be added here dynamically -->
+            </div>
+        </div>
+        <div class="scale">
+            
+
+            <div class="note" id="note1"></div>
+            <div class="note" id="note2"></div>
+            <div class="note" id="note3"></div>
+            <div class="note" id="note4"></div>
+            <div class="note" id="note5"></div>
+            <div class="note" id="note6"></div>
+            <div class="note" id="note7"></div>
+            <div class="note" id="note8"></div>
+        </div>
+        
+        <div class="buttons">
+            <button onclick="makeGuess('C')" class="c-note">C</button>
+            <button onclick="makeGuess('D')" class="d-note">D</button>
+            <button onclick="makeGuess('E')" class="e-note">E</button>
+            <button onclick="makeGuess('F')" class="f-note">F</button>
+            <button onclick="makeGuess('G')" class="g-note">G</button>
+            <button onclick="makeGuess('A')" class="a-note">A</button>
+            <button onclick="makeGuess('B')" class="b-note">B</button>
+        </div>
+        <div class="guesses">
+            <div class="guess" id="guess1"></div>
+            <div class="guess" id="guess2"></div>
+            <div class="guess" id="guess3"></div>
+            <div class="guess" id="guess4"></div>
+            <div class="guess" id="guess5"></div>
+            <div class="guess" id="guess6"></div>
+            <div class="guess" id="guess7"></div>
+            <div class="guess" id="guess8"></div>
+        </div>
+        <button onclick="startNewRound()" class="new-round">Start New Round</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
