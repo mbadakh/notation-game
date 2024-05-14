@@ -176,9 +176,9 @@ margin-bottom: 1rem;
 }
 
 .clef {
-    font-size: 75px;
+    font-size: 60px;
     position: absolute;
-    top: 45.5%;
+    top: 49%;
     transform: translateY(-50%);
     left: 2%;
     z-index: 99;
