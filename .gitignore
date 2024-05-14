@@ -2,5 +2,5 @@
 !*.html
 !*.js
 !*.css
-
+!*.md
 !.gitignore
