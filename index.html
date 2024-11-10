@@ -10,29 +10,30 @@
     
     <div class="container">
         <h1>Guess The Notes</h1>
-        <div class="timer">
+         <div class="timer">
             <div class="last-round-time">
                 <h5>Your Last Round Time:</h5>
-                <h5 id="timer">0</h5>
+                <h5 id="timer">00:00</h5>
             </div>
             <div class="personal-best">
                 <h5>Your Personal Best Time:</h5>
                 <h5 id="best-time">99</h5>
             </div>
-            
+            <button onclick="toggleMute()" id="mute-button">🔊 Mute</button>
         </div>
-        <div class="music-sheet ">
+        
+        <div class="music-sheet">
             <div class="clef">&#119070;</div>
             <div class="staff">
-                <!-- Staff lines will be added here dynamically -->
+                <!-- Staff lines are added dynamically by JavaScript -->
             </div>
             <div class="notes">
                 <!-- Notes will be added here dynamically -->
             </div>
         </div>
+        
         <div class="scale">
-            
-
+            <!-- Placeholder for note guesses (three octaves from C3 to B5) -->
             <div class="note" id="note1"></div>
             <div class="note" id="note2"></div>
             <div class="note" id="note3"></div>
@@ -43,16 +44,36 @@
             <div class="note" id="note8"></div>
         </div>
         
-        <div class="buttons">
-            <button onclick="makeGuess('C')" class="c-note">C</button>
-            <button onclick="makeGuess('D')" class="d-note">D</button>
-            <button onclick="makeGuess('E')" class="e-note">E</button>
-            <button onclick="makeGuess('F')" class="f-note">F</button>
-            <button onclick="makeGuess('G')" class="g-note">G</button>
-            <button onclick="makeGuess('A')" class="a-note">A</button>
-            <button onclick="makeGuess('B')" class="b-note">B</button>
+        <div class="buttons" dir="rtl">
+            <!-- Buttons for guessing notes, expanded to cover C3-B3, C4-B4, and C5-B5 -->
+            <!-- <button class="c-note" onclick="makeGuess('C3')">دو3</button>
+            <button class="d-note" onclick="makeGuess('D3')">ري3</button>
+            <button class="e-note" onclick="makeGuess('E3')">مي3</button>
+            <button class="f-note" onclick="makeGuess('F3')">فا3</button>
+            <button class="g-note" onclick="makeGuess('G3')">صول3</button>
+            <button class="a-note" onclick="makeGuess('A3')">لا3</button>
+            <button class="b-note" onclick="makeGuess('B3')">سي3</button>
+            <br> -->
+            <button class="c-note" onclick="makeGuess('C5')">دو5</button>
+            <button class="d-note" onclick="makeGuess('D5')">ري5</button>
+            <button class="e-note" onclick="makeGuess('E5')">مي5</button>
+            <button class="f-note" onclick="makeGuess('F5')">فا5</button>
+            <button class="g-note" onclick="makeGuess('G5')">صول5</button>
+            <button class="a-note" onclick="makeGuess('A5')">لا5</button>
+            <button class="b-note" onclick="makeGuess('B5')">سي5</button>
+            <br>
+            <button class="c-note" onclick="makeGuess('C4')">دو4</button>
+            <button class="d-note" onclick="makeGuess('D4')">ري4</button>
+            <button class="e-note" onclick="makeGuess('E4')">مي4</button>
+            <button class="f-note" onclick="makeGuess('F4')">فا4</button>
+            <button class="g-note" onclick="makeGuess('G4')">صول4</button>
+            <button class="a-note" onclick="makeGuess('A4')">لا4</button>
+            <button class="b-note" onclick="makeGuess('B4')">سي4</button>
+            
         </div>
+        
         <div class="guesses">
+            <!-- Divs for displaying user guesses and feedback -->
             <div class="guess" id="guess1"></div>
             <div class="guess" id="guess2"></div>
             <div class="guess" id="guess3"></div>
@@ -62,8 +83,10 @@
             <div class="guess" id="guess7"></div>
             <div class="guess" id="guess8"></div>
         </div>
+        
         <button onclick="startNewRound()" class="new-round">Start New Round</button>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
